@@ -1363,7 +1363,7 @@
 
 }));
 
-/*! lg-autoplay - v1.0.4 - 2017-03-28
+/*! lg-autoplay - v1.0.4 - 2025-03-28
 * http://sachinchoolur.github.io/lightGallery
 * Copyright (c) 2017 Sachin N; Licensed GPLv3 */
 
@@ -1697,7 +1697,7 @@
 
 }));
 
-/*! lg-pager - v1.0.2 - 2017-01-22
+/*! lg-pager - v1.0.2 - 2025-01-22
 * http://sachinchoolur.github.io/lightGallery
 * Copyright (c) 2017 Sachin N; Licensed GPLv3 */
 
@@ -1803,7 +1803,7 @@
 
 }));
 
-/*! lg-thumbnail - v1.1.0 - 2017-08-08
+/*! lg-thumbnail - v1.1.0 - 2025-08-08
 * http://sachinchoolur.github.io/lightGallery
 * Copyright (c) 2017 Sachin N; Licensed GPLv3 */
 
@@ -2625,7 +2625,7 @@
 
 }));
 
-/*! lg-zoom - v1.1.0 - 2017-08-08
+/*! lg-zoom - v1.1.0 - 2025-08-08
 * http://sachinchoolur.github.io/lightGallery
 * Copyright (c) 2017 Sachin N; Licensed GPLv3 */
 
@@ -3153,7 +3153,7 @@
 
 }));
 
-/*! lg-hash - v1.0.4 - 2017-12-20
+/*! lg-hash - v1.0.4 - 2025-12-20
 * http://sachinchoolur.github.io/lightGallery
 * Copyright (c) 2017 Sachin N; Licensed GPLv3 */
 
@@ -3255,7 +3255,7 @@
 
 }));
 
-/*! lg-share - v1.1.0 - 2017-10-03
+/*! lg-share - v1.1.0 - 2025-10-03
 * http://sachinchoolur.github.io/lightGallery
 * Copyright (c) 2017 Sachin N; Licensed GPLv3 */
 
