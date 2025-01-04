@@ -1,0 +1,283 @@
+.header-right {
+    height: 100%;
+	
+	
+	
+    .nav-item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .nav-link {
+            color: $l-ctd;
+            font-size: 18px;
+        }
+    }
+	.right-sidebar{
+		margin-right:-30px;
+		a{
+			height: 80px;
+			width: 80px;
+			text-align: center;
+			justify-content: center;
+			display: flex;
+			align-items: center;
+			border-left: 1px solid $light;
+		}
+	}
+    &>li {
+        &:not(:first-child) {
+            padding-left:1.5rem;
+			@include respond('phone-land') {
+				padding-left:0.5rem;
+			}
+        }
+		
+    }
+    .notification_dropdown {
+        @include respond('phone-land') {
+            position: static;
+        }
+        .nav-link {
+            position: relative;
+            color: $dark;
+			background: transparent;
+			border:1px solid rgba($dark,0.1);
+			border-radius: 2rem;
+			height:55px;
+			width:55px;
+			text-align:center;
+			line-height: 2;
+			@include respond('tab-land') {
+				padding: 10px;
+				height: 40px;
+				width: 40px;
+				line-height: 1;
+			}
+			
+            i {
+                font-size: 24px;
+				@include respond('tab-land') {
+					font-size: 18px;
+				}
+				
+            }
+			svg{
+				@include respond('tab-land') {
+					width:18px;
+					height:18px;
+				}
+			}
+            .badge {
+                position: absolute;
+                font-size: 14px;
+                border-radius: 50%;
+                right: -10px;
+                top: -10px;
+				padding:0px;
+                font-weight: normal;
+                text-align: center;
+                line-height:25px;
+				height:25px;
+				width:25px;
+				@include respond('phone-land') {
+					line-height:18px;
+					height:20px;
+					width:20px;
+					font-size: 12px;
+				}
+            }
+			
+        }
+        .dropdown-item {
+            &:focus,
+            &:active {
+                a {
+                    color: $white;
+                }
+            }
+            a {
+                color: $dark;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        border-width:0;
+        box-shadow: 0 0 37px rgba(8,21,66,0.05);
+        @at-root [data-theme-version="dark"] & {
+            box-shadow: none;
+        }
+    }
+    .header-profile {
+        &>a.nav-link {
+			padding:0;
+			background:rgba($primary,0.05);
+			border-radius:4rem;
+			display: flex;
+			align-items: center;
+				
+            i {
+                font-weight: 700;
+            }
+			.header-info{
+				padding-right: 20px;
+				text-align: right;
+				padding-left: 20px;
+				
+				@include respond('tab-land') {
+					padding-right: 10px;
+					padding-left: 10px;
+				}
+				@include respond('phone-land') {
+					display:none;
+				}
+				span{
+					font-size:16x;
+					color:$primary;
+					display: block;
+					font-weight: 400;
+					@include respond('tab-land') {
+						font-size:14px;
+					}
+				}
+				strong{
+					font-weight:600;
+				}
+			}
+        }
+        .dropdown-menu {
+            padding: 15px 0;
+            min-width: 12.5rem;
+        }
+        img {
+            width: 56px;
+            height: 56px;
+			border:1px solid $primary;
+            border-radius: 3rem;
+			@include respond('tab-land') {
+				 width: 40px;
+				height: 40px;
+			}
+        }
+        .dropdown-toggle {
+            i {
+                font-size: 1.25rem;
+            }
+            span {
+                @include respond('phone') {
+                    display: none;
+                }
+            }
+        }
+        .profile_title {
+            background: $primary;
+            color: $white;
+            padding: 10px 20px;
+            h5 {
+                color: $white;
+                margin-bottom: 3px;
+            }
+        }
+        // .dropdown-toggle::after{
+        //     display: none;
+        // }
+        .dropdown-item {
+            padding: 8px 24px;
+        }
+    }
+}
+.dz-fullscreen{
+	#icon-minimize{
+		display:none;
+	}
+	&.active{
+		#icon-full{
+			display:none;
+		}
+		#icon-minimize{
+			display:inline-block;
+		}
+	}
+}
+.notification_dropdown {
+    .dropdown-menu-right {
+        min-width: 310px;
+        padding: 0rem 0 1rem;
+        top: 100%;
+		
+        .notification_title {
+            background: $primary;
+            color: $white;
+            padding: 10px 20px;
+            h5 {
+                color: $white;
+                margin-bottom: 3px;
+            }
+        }
+        .media {
+			width: 45px !important;
+			height: 45px !important;
+			font-size: 18px !important;
+			
+            // &:last-child{
+            //     border-bottom: 0px;
+            // }
+            @at-root [data-theme-version="dark"] & {
+                border-color: $d-border;
+            }
+            &>span {
+                width: 35px;
+                height: 35px;
+                border-radius: 50px;
+                display: inline-block;
+                padding: 7px 9px;
+                margin-right: 10px;
+				@at-root [direction="rtl"]#{&} {
+					 margin-right: 0;
+					 margin-left: 10px
+				}
+                &.success {
+                    background: $success-light;
+                    color: $success;
+                }
+                &.primary {
+                    background: $primary-light;
+                    color: $primary;
+                }
+                &.danger {
+                    background: $danger-light;
+                    color: $danger;
+                }
+            }
+            .notify-time {
+                width: 100%!important;
+                margin-right: 0!important;
+                color: $l-ctl;
+            }
+            p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                max-width: 200px;
+                margin-bottom: 0;
+                margin-top: 5px;
+				@include respond('phone') {
+				    max-width: 100px;
+				}
+            }
+        }
+        .all-notification {
+            display: block;
+            padding: 15px 30px 0;
+            // color: $dark;
+            text-align: center;
+			border-top: 1px solid $light;
+				
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+}
