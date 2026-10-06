@@ -1,50 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Koki - Bootstrap Admin Dashboard </title>
-    
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
-    <link href="./vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
-    <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-    <link href="./vendor/lightgallery/css/lightgallery.min.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>IRIS - admin amvsoft.tech</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png" />
+    <link href="./vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet" />
+    <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="./vendor/lightgallery/css/lightgallery.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-
-    
     <div data-layout="preloader"></div>
-    
 
-
-    
     <div id="main-wrapper">
-
-       
         <div data-layout="nav"></div>
-        
-		
-		
-		<div data-layout="chat"></div>
-		
 
+        <div data-layout="chat"></div>
 
-		
-		
-        
         <div data-layout="header"></div>
-        
 
-        
         <div data-layout="sidebar"></div>
-        
 
-        
         <div class="content-body">
             <div class="container-fluid">
                 <div class="row page-titles">
@@ -56,68 +36,65 @@
                     </div>
                     <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Plugins</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Light Gallery</a></li>
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)">Plugins</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                <a href="javascript:void(0)">Light Gallery</a>
+                            </li>
                         </ol>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                                <div class="card-header">
-									<h4 class="card-title">Light Gallery</h4>
-								</div>
-								<div class="card-body">
-									<div id="lightgallery" class="row">
-										<a href="images/gallery/pic1.jpg" data-exthumbimage="images/gallery/pic1.jpg" data-src="images/gallery/pic1.jpg" class="col-3 col-sm-6 col-md-3">
-											<img src="images/gallery/pic1.jpg" class="w-100"/>
-										</a>
-										<a href="images/gallery/pic2.jpg" data-exthumbimage="images/gallery/pic2.jpg" data-src="images/gallery/pic2.jpg" class="col-3 col-sm-6 col-md-3">
-											<img src="images/gallery/pic2.jpg" class="w-100" />
-										</a>
-										<a href="images/gallery/pic3.jpg" data-exthumbimage="images/gallery/pic3.jpg" data-src="images/gallery/pic3.jpg" class="col-3 col-sm-6 col-md-3">
-											<img src="images/gallery/pic3.jpg" class="w-100" />
-										</a>
-										<a href="images/gallery/pic4.jpg" data-exthumbimage="images/gallery/pic4.jpg" data-src="images/gallery/pic4.jpg" class="col-3 col-sm-6 col-md-3">
-											<img src="images/gallery/pic4.jpg" class="w-100" />
-										</a>
-									</div>
-								</div>
+                            <div class="card-header">
+                                <h4 class="card-title">Light Gallery</h4>
+                            </div>
+                            <div class="card-body">
+                                <div id="lightgallery" class="row">
+                                    <a href="images/gallery/pic1.jpg" data-exthumbimage="images/gallery/pic1.jpg"
+                                        data-src="images/gallery/pic1.jpg" class="col-3 col-sm-6 col-md-3">
+                                        <img src="images/gallery/pic1.jpg" class="w-100" />
+                                    </a>
+                                    <a href="images/gallery/pic2.jpg" data-exthumbimage="images/gallery/pic2.jpg"
+                                        data-src="images/gallery/pic2.jpg" class="col-3 col-sm-6 col-md-3">
+                                        <img src="images/gallery/pic2.jpg" class="w-100" />
+                                    </a>
+                                    <a href="images/gallery/pic3.jpg" data-exthumbimage="images/gallery/pic3.jpg"
+                                        data-src="images/gallery/pic3.jpg" class="col-3 col-sm-6 col-md-3">
+                                        <img src="images/gallery/pic3.jpg" class="w-100" />
+                                    </a>
+                                    <a href="images/gallery/pic4.jpg" data-exthumbimage="images/gallery/pic4.jpg"
+                                        data-src="images/gallery/pic4.jpg" class="col-3 col-sm-6 col-md-3">
+                                        <img src="images/gallery/pic4.jpg" class="w-100" />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <!-- /# card -->
                     </div>
                 </div>
-			</div>
+            </div>
         </div>
-        
 
-
-       
         <div data-layout="footer"></div>
-       
-
-        
-        
-
-        
     </div>
-    
 
-    
-    
     <script src="./js/layout-loader.js"></script>
     <script src="./vendor/global/global.min.js"></script>
-	<script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
     <script src="./js/custom.min.js"></script>
-	<script src="./js/deznav-init.js"></script>
-	
-	<script src="./vendor/lightgallery/js/lightgallery-all.min.js"></script>
-	<script>
-		$('#lightgallery').lightGallery({
-			loop:true,
-			thumbnail:true,
-			exThumbImage: 'data-exthumbimage'
-		});
-	</script>
+    <script src="./js/deznav-init.js"></script>
+
+    <script src="./vendor/lightgallery/js/lightgallery-all.min.js"></script>
+    <script>
+        $("#lightgallery").lightGallery({
+            loop: true,
+            thumbnail: true,
+            exThumbImage: "data-exthumbimage",
+        });
+    </script>
 </body>
+
 </html>
