@@ -1,50 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>IRIS - admin amvsoft.tech</title>
-    
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png" />
     <!-- Custom Stylesheet -->
-    	<link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
-
+    <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-
-    
     <div data-layout="preloader"></div>
-    
 
-
-    
     <div id="main-wrapper">
-
-       
         <div data-layout="nav"></div>
-        
-		
-		
-		<div data-layout="chat"></div>
-		
 
+        <div data-layout="chat"></div>
 
-		
-		
-        
         <div data-layout="header"></div>
-        
 
-        
         <div data-layout="sidebar"></div>
-        
 
-        
         <div class="content-body">
             <div class="container-fluid">
                 <div class="row page-titles">
@@ -56,12 +36,16 @@
                     </div>
                     <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Form</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Validation</a></li>
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)">Form</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                <a href="javascript:void(0)">Validation</a>
+                            </li>
                         </ol>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
@@ -78,7 +62,8 @@
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-username" name="val-username" placeholder="Enter a username..">
+                                                        <input type="text" class="form-control" id="val-username"
+                                                            name="val-username" placeholder="Enter a username.." />
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -86,7 +71,8 @@
                                                             class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-email" name="val-email" placeholder="Your valid email..">
+                                                        <input type="text" class="form-control" id="val-email"
+                                                            name="val-email" placeholder="Your valid email.." />
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -94,23 +80,30 @@
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="password" class="form-control" id="val-password" name="val-password" placeholder="Choose a safe one..">
+                                                        <input type="password" class="form-control" id="val-password"
+                                                            name="val-password" placeholder="Choose a safe one.." />
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-confirm-password">Confirm Password <span
-                                                            class="text-danger">*</span>
+                                                    <label class="col-lg-4 col-form-label"
+                                                        for="val-confirm-password">Confirm Password
+                                                        <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="password" class="form-control" id="val-confirm-password" name="val-confirm-password" placeholder="..and confirm it!">
+                                                        <input type="password" class="form-control"
+                                                            id="val-confirm-password" name="val-confirm-password"
+                                                            placeholder="..and confirm it!" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-suggestions">Suggestions <span
+                                                    <label class="col-lg-4 col-form-label"
+                                                        for="val-suggestions">Suggestions <span
                                                             class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <textarea class="form-control" id="val-suggestions" name="val-suggestions" rows="5" placeholder="What would you like to see?"></textarea>
+                                                        <textarea class="form-control" id="val-suggestions"
+                                                            name="val-suggestions" rows="5"
+                                                            placeholder="What would you like to see?"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -141,7 +134,8 @@
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-currency" name="val-currency" placeholder="$21.60">
+                                                        <input type="text" class="form-control" id="val-currency"
+                                                            name="val-currency" placeholder="$21.60" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -149,7 +143,8 @@
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-website" name="val-website" placeholder="http://example.com">
+                                                        <input type="text" class="form-control" id="val-website"
+                                                            name="val-website" placeholder="http://example.com" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -157,7 +152,8 @@
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-phoneus" name="val-phoneus" placeholder="212-999-0000">
+                                                        <input type="text" class="form-control" id="val-phoneus"
+                                                            name="val-phoneus" placeholder="212-999-0000" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -165,7 +161,8 @@
                                                             class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-digits" name="val-digits" placeholder="5">
+                                                        <input type="text" class="form-control" id="val-digits"
+                                                            name="val-digits" placeholder="5" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -173,7 +170,8 @@
                                                             class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-number" name="val-number" placeholder="5.0">
+                                                        <input type="text" class="form-control" id="val-number"
+                                                            name="val-number" placeholder="5.0" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -181,25 +179,29 @@
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-range" name="val-range" placeholder="4">
+                                                        <input type="text" class="form-control" id="val-range"
+                                                            name="val-range" placeholder="4" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-lg-4 col-form-label"><a
-                                                            href="javascript:void()">Terms &amp; Conditions</a> <span
-                                                            class="text-danger">*</span>
+                                                            href="javascript:void()">Terms &amp; Conditions</a>
+                                                        <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-8">
-                                                        <label class="css-control css-control-primary css-checkbox" for="val-terms">
+                                                        <label class="css-control css-control-primary css-checkbox"
+                                                            for="val-terms">
                                                             <input type="checkbox" class="css-control-input mr-2"
-                                                                id="val-terms" name="val-terms" value="1">
-                                                            <span class="css-control-indicator"></span> I agree to the
-                                                            terms</label>
+                                                                id="val-terms" name="val-terms" value="1" />
+                                                            <span class="css-control-indicator"></span> I
+                                                            agree to the terms</label>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-lg-8 ml-auto">
-                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                        <button type="submit" class="btn btn-primary">
+                                                            Submit
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -221,32 +223,43 @@
                                             <label class="text-label">Username</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="val-username1" name="val-username" placeholder="Enter a username..">
+                                                <input type="text" class="form-control" id="val-username1"
+                                                    name="val-username" placeholder="Enter a username.." />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="text-label">Password *</label>
                                             <div class="input-group transparent-append">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-lock"></i>
+                                                    </span>
                                                 </div>
-                                                <input type="password" class="form-control" id="val-password1" name="val-password" placeholder="Choose a safe one..">
+                                                <input type="password" class="form-control" id="val-password1"
+                                                    name="val-password" placeholder="Choose a safe one.." />
                                                 <div class="input-group-append show-pass">
-                                                    <span class="input-group-text"> <i class="fa fa-eye-slash"></i>
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-eye-slash"></i>
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-check">
-                                                <input id="checkbox1" class="form-check-input" type="checkbox">
+                                                <input id="checkbox1" class="form-check-input" type="checkbox" />
                                                 <label for="checkbox1" class="form-check-label">Check me out</label>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn mr-2 btn-primary">Submit</button>
-                                        <button type="submit" class="btn btn-light">cencel</button>
+                                        <button type="submit" class="btn mr-2 btn-primary">
+                                            Submit
+                                        </button>
+                                        <button type="submit" class="btn btn-light">
+                                            cencel
+                                        </button>
                                     </form>
                                 </div>
                             </div>
@@ -255,39 +268,19 @@
                 </div>
             </div>
         </div>
-        
 
-
-       
         <div data-layout="footer"></div>
-       
-
-        
-        
-
-        
     </div>
-    
 
-    
-    
     <script src="./js/layout-loader.js"></script>
     <script src="./vendor/global/global.min.js"></script>
-	<script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
     <script src="./js/custom.min.js"></script>
-	<script src="./js/deznav-init.js"></script>
-	
-    
-
-
-
+    <script src="./js/deznav-init.js"></script>
     <!-- Jquery Validation -->
     <script src="./vendor/jquery-validation/jquery.validate.min.js"></script>
     <!-- Form validate init -->
     <script src="./js/plugins-init/jquery.validate-init.js"></script>
-
-
-
 </body>
 
 </html>
