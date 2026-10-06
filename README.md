@@ -65,6 +65,27 @@ No se deben añadir bloques `<style>`, bloques `<script>` inline ni atributos `s
 
 Las páginas de autenticación y error son excepciones: mantienen su estructura independiente porque no utilizan el shell del dashboard.
 
+## Flujo de carga
+
+```mermaid
+flowchart TD
+    A[Usuario abre una pagina HTML] --> B[El navegador carga el documento]
+    B --> C[layout-loader.js]
+    C --> D{Hay placeholders data-layout?}
+    D -- Si --> E[Cargar fragmentos desde layout/]
+    E --> F[Insertar preloader, nav, chat, header, sidebar y footer]
+    D -- No --> G[Continuar con el HTML existente]
+    F --> H[Cargar dependencias vendor]
+    G --> H
+    H --> I[Cargar scripts comunes]
+    I --> J[Cargar scripts especificos de la pagina]
+    J --> K[Inicializar plugins y componentes]
+    K --> L[Dashboard operativo]
+    E -. Error de carga .-> M[Registrar error y mostrar alerta]
+```
+
+El loader se ejecuta antes de los scripts que dependen del shell. Si un fragmento no puede cargarse, el error se registra en la consola y se muestra una alerta visible en la interfaz.
+
 ## Estructura relevante
 
 ```text
