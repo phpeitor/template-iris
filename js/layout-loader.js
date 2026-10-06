@@ -1,49 +1,27 @@
-const scripts = [
-    './vendor/global/global.min.js',
-    './vendor/bootstrap-select/dist/js/bootstrap-select.min.js',
-    './vendor/chart.js/Chart.bundle.min.js',
-    './js/custom.min.js',
-    './js/deznav-init.js',
-    './vendor/owl-carousel/owl.carousel.js',
-    './vendor/apexchart/apexchart.js',
-    './js/dashboard/dashboard-1.js'
-];
+(function () {
+    var placeholders = document.querySelectorAll('[data-layout]');
 
-const layouts = document.querySelectorAll('[data-layout]');
+    function loadLayout(element) {
+        var name = element.getAttribute('data-layout');
+        var request = new XMLHttpRequest();
 
-async function loadLayout(element) {
-    const name = element.dataset.layout;
-    const response = await fetch(`./layout/${name}.html`);
+        request.open('GET', './layout/' + name + '.html', false);
+        request.send();
 
-    if (!response.ok) {
-        throw new Error(`No se pudo cargar el layout "${name}" (${response.status}).`);
+        if (request.status < 200 || request.status >= 300) {
+            throw new Error('No se pudo cargar el layout "' + name + '" (' + request.status + ').');
+        }
+
+        element.outerHTML = request.responseText;
     }
 
-    element.outerHTML = await response.text();
-}
-
-function loadScript(source) {
-    return new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = source;
-        script.onload = resolve;
-        script.onerror = () => reject(new Error(`No se pudo cargar el script "${source}".`));
-        document.body.appendChild(script);
-    });
-}
-
-async function initializePage() {
-    await Promise.all(Array.from(layouts, loadLayout));
-
-    for (const source of scripts) {
-        await loadScript(source);
+    try {
+        Array.prototype.forEach.call(placeholders, loadLayout);
+    } catch (error) {
+        console.error('Error al cargar los layouts:', error);
+        document.body.insertAdjacentHTML(
+            'afterbegin',
+            '<div class="alert alert-danger m-3" role="alert">No se pudo cargar la interfaz. Revisa la consola para más detalles.</div>'
+        );
     }
-}
-
-initializePage().catch((error) => {
-    console.error('Error al inicializar la página:', error);
-    document.body.insertAdjacentHTML(
-        'afterbegin',
-        '<div class="alert alert-danger m-3" role="alert">No se pudo cargar la interfaz. Revisa la consola para más detalles.</div>'
-    );
-});
+}());
