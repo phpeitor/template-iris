@@ -25,6 +25,9 @@ La aplicación se debe probar mediante HTTP, preferentemente desde Apache. Abrir
 - Conservar los atributos `alt`, `aria-*`, `role` y estados accesibles existentes.
 - Mantener los enlaces relativos y verificar que apunten a archivos existentes.
 - No trasladar scripts específicos de una página a un archivo global.
+- No incluir bloques `<script>` inline ni bloques `<style>` dentro de páginas HTML.
+- Colocar la lógica específica en `js/pages/<pagina>.js` y los estilos específicos en `css/pages/<pagina>.css`.
+- Evitar atributos `style` en HTML; usar clases semánticas en la hoja de estilos de la página.
 - Evitar cambios masivos de formato que dificulten revisar el diff.
 
 ## Reglas del cargador de layouts
@@ -49,6 +52,7 @@ La aplicación se debe probar mediante HTTP, preferentemente desde Apache. Abrir
 ## Reglas CSS y UI
 
 - Mantener los estilos principales en `css/style.css` y las hojas existentes en `css/`.
+- Usar `css/pages/` para estilos exclusivos de una vista y enlazarlos desde el `<head>` de esa página.
 - Reutilizar las clases Bootstrap y las clases de la plantilla antes de crear nuevas.
 - Preservar el header, el sidebar, el preloader, el chat y el comportamiento responsive.
 - Mantener visibles los estados de foco y selección en controles interactivos.

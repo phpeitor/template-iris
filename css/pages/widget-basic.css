@@ -1,0 +1,35 @@
+.widget-basic-progress-80 {
+	width: 80%;
+}
+
+.widget-basic-progress-50 {
+	width: 50%;
+}
+
+.widget-basic-progress-76 {
+	width: 76%;
+}
+
+.widget-basic-progress-30 {
+	width: 30%;
+}
+
+.widget-basic-progress-40 {
+	width: 40%;
+}
+
+.widget-basic-progress-60 {
+	width: 60%;
+}
+
+.widget-basic-progress-70 {
+	width: 70%;
+}
+
+.widget-basic-cover-one {
+	background-image: url("../../images/big/img1.jpg");
+}
+
+.widget-basic-cover-five {
+	background-image: url("../../images/big/img5.jpg");
+}
