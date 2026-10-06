@@ -1,57 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>IRIS - admin amvsoft.tech </title>
-    
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
-	<link href="./vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
-	<link href="./vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
-	<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
-
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>IRIS - admin amvsoft.tech</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png" />
+	<link href="./vendor/owl-carousel/owl.carousel.css" rel="stylesheet" />
+	<link href="./vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+	<link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+	<link href="./css/style.css" rel="stylesheet" />
+	<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
 </head>
+
 <body>
+	<div data-layout="preloader"></div>
 
-    
-    <div data-layout="preloader"></div>
-    
+	<div id="main-wrapper">
+		<div data-layout="nav"></div>
 
-    
-    <div id="main-wrapper">
-
-       
-        <div data-layout="nav"></div>
-        
-		
-		
 		<div data-layout="chat"></div>
-		
-		
-		
-        <div data-layout="header"></div>
-        
 
-        
-        <div data-layout="sidebar"></div>
-        
-		
-		
-        <div class="content-body">
-            
+		<div data-layout="header"></div>
+
+		<div data-layout="sidebar"></div>
+
+		<div class="content-body">
 			<div class="container-fluid">
 				<div class="form-head d-flex mb-3 mb-md-4 align-items-start">
 					<div class="mr-auto d-lg-block">
 						<a href="doctor-detail.html" class="btn btn-primary btn-rounded">+ Add New</a>
 					</div>
 					<div class="input-group search-area ml-auto d-inline-flex mr-2">
-						<input type="text" class="form-control" placeholder="Search here">
+						<input type="text" class="form-control" placeholder="Search here" />
 						<div class="input-group-append">
-							<button type="button" class="input-group-text"><i class="flaticon-381-search-2"></i></button>
+							<button type="button" class="input-group-text">
+								<i class="flaticon-381-search-2"></i>
+							</button>
 						</div>
 					</div>
 					<a href="javascript:void(0);" class="settings-icon"><i class="flaticon-381-settings-2 mr-0"></i></a>
@@ -59,13 +45,14 @@
 				<div class="row">
 					<div class="col-xl-12">
 						<div class="table-responsive">
-							<table id="example5" class="table shadow-hover  table-bordered mb-4 dataTablesCard fs-14">
+							<table id="example5" class="table shadow-hover table-bordered mb-4 dataTablesCard fs-14">
 								<thead>
 									<tr>
 										<th>
 											<div class="checkbox align-self-center">
-												<div class="custom-control custom-checkbox ">
-													<input type="checkbox" class="custom-control-input" id="checkAll" required="">
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" id="checkAll"
+														required="" />
 													<label class="custom-control-label" for="checkAll"></label>
 												</div>
 											</div>
@@ -84,12 +71,15 @@
 										<td>
 											<div class="d-flex align-items-center">
 												<div class="checkbox text-right align-self-center">
-													<div class="custom-control custom-checkbox ">
-														<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-														<label class="custom-control-label" for="customCheckBox2"></label>
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input"
+															id="customCheckBox2" required="" />
+														<label class="custom-control-label"
+															for="customCheckBox2"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/9.jpg" height="43" width="43" class="rounded-circle ml-4">
+												<img alt="" src="images/doctors/9.jpg" height="43" width="43"
+													class="rounded-circle ml-4" />
 											</div>
 										</td>
 										<td>#P-00012</td>
@@ -97,18 +87,29 @@
 										<td>Dr. Samantha</td>
 										<td>Dentist</td>
 										<td>
-											<a href="#" class="btn btn-primary light btn-rounded btn-sm text-nowrap" >5 Appointment</a>
+											<a href="#" class="btn btn-primary light btn-rounded btn-sm text-nowrap">5
+												Appointment</a>
 										</td>
 										<td><span class="font-w500">+12 4124 5125</span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-light font-w600">Unavailable</span>
 												<div class="dropdown ml-auto text-right">
-													<div class="btn-link" data-toggle="dropdown" >
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<div class="btn-link" data-toggle="dropdown">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
@@ -124,12 +125,15 @@
 										<td>
 											<div class="d-flex align-items-center">
 												<div class="checkbox text-right align-self-center">
-													<div class="custom-control custom-checkbox ">
-														<input type="checkbox" class="custom-control-input" id="customCheckBox21" required="">
-														<label class="custom-control-label" for="customCheckBox21"></label>
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input"
+															id="customCheckBox21" required="" />
+														<label class="custom-control-label"
+															for="customCheckBox21"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/10.jpg" height="43" width="43" class="rounded-circle ml-4">
+												<img alt="" src="images/doctors/10.jpg" height="43" width="43"
+													class="rounded-circle ml-4" />
 											</div>
 										</td>
 										<td>#P-00016</td>
@@ -137,18 +141,29 @@
 										<td>Dr. Cindy Anderson</td>
 										<td>Physical Therapy</td>
 										<td>
-											<a href="#" class="btn btn-primary light btn-rounded btn-sm" >2 Appointment</a>
+											<a href="#" class="btn btn-primary light btn-rounded btn-sm">2
+												Appointment</a>
 										</td>
 										<td><span class="font-w500">+12 4124 1556</span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-light font-w600">Unavailable</span>
 												<div class="dropdown ml-auto text-right">
-													<div class="btn-link" data-toggle="dropdown" >
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<div class="btn-link" data-toggle="dropdown">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
@@ -164,12 +179,15 @@
 										<td>
 											<div class="d-flex align-items-center">
 												<div class="checkbox text-right align-self-center">
-													<div class="custom-control custom-checkbox ">
-														<input type="checkbox" class="custom-control-input" id="customCheckBox22" required="">
-														<label class="custom-control-label" for="customCheckBox22"></label>
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input"
+															id="customCheckBox22" required="" />
+														<label class="custom-control-label"
+															for="customCheckBox22"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/11.jpg" height="43" width="43" class="rounded-circle ml-4">
+												<img alt="" src="images/doctors/11.jpg" height="43" width="43"
+													class="rounded-circle ml-4" />
 											</div>
 										</td>
 										<td>#P-00015</td>
@@ -177,18 +195,28 @@
 										<td>Dr. Olivia Jean</td>
 										<td>Dentist</td>
 										<td>
-											<a href="#" class="btn btn-outline-light btn-rounded btn-sm" >No Schedule</a>
+											<a href="#" class="btn btn-outline-light btn-rounded btn-sm">No Schedule</a>
 										</td>
 										<td><span class="font-w500">+12 4156 6675</span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-light font-w600">Unavailable</span>
 												<div class="dropdown ml-auto text-right">
-													<div class="btn-link" data-toggle="dropdown" >
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<div class="btn-link" data-toggle="dropdown">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
@@ -204,12 +232,15 @@
 										<td>
 											<div class="d-flex align-items-center">
 												<div class="checkbox text-right align-self-center">
-													<div class="custom-control custom-checkbox ">
-														<input type="checkbox" class="custom-control-input" id="customCheckBox24" required="">
-														<label class="custom-control-label" for="customCheckBox24"></label>
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input"
+															id="customCheckBox24" required="" />
+														<label class="custom-control-label"
+															for="customCheckBox24"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/12.jpg" height="43" width="43" class="rounded-circle ml-4">
+												<img alt="" src="images/doctors/12.jpg" height="43" width="43"
+													class="rounded-circle ml-4" />
 											</div>
 										</td>
 										<td>#P-00014</td>
@@ -217,18 +248,29 @@
 										<td>Dr. David Lee</td>
 										<td>Nursing</td>
 										<td>
-											<a href="#" class="btn btn-primary light btn-rounded btn-sm" >2 Appointment</a>
+											<a href="#" class="btn btn-primary light btn-rounded btn-sm">2
+												Appointment</a>
 										</td>
 										<td><span class="font-w500">+12 4155 7623</span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-primary font-w600">Available</span>
 												<div class="dropdown ml-auto text-right">
-													<div class="btn-link" data-toggle="dropdown" >
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<div class="btn-link" data-toggle="dropdown">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
@@ -244,12 +286,15 @@
 										<td>
 											<div class="d-flex align-items-center">
 												<div class="checkbox text-right align-self-center">
-													<div class="custom-control custom-checkbox ">
-														<input type="checkbox" class="custom-control-input" id="customCheckBox25" required="">
-														<label class="custom-control-label" for="customCheckBox25"></label>
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input"
+															id="customCheckBox25" required="" />
+														<label class="custom-control-label"
+															for="customCheckBox25"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/13.jpg" height="43" width="43" class="rounded-circle ml-4">
+												<img alt="" src="images/doctors/13.jpg" height="43" width="43"
+													class="rounded-circle ml-4" />
 											</div>
 										</td>
 										<td>#P-00013</td>
@@ -257,18 +302,29 @@
 										<td>Dr. Marcus Jr</td>
 										<td>Physical Therapy</td>
 										<td>
-											<a href="#" class="btn btn-primary light btn-rounded btn-sm" >2 Appointment</a>
+											<a href="#" class="btn btn-primary light btn-rounded btn-sm">2
+												Appointment</a>
 										</td>
 										<td><span class="font-w500">+12 4124 5156</span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-light font-w600">Unavailable</span>
 												<div class="dropdown ml-auto text-right">
-													<div class="btn-link" data-toggle="dropdown" >
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<div class="btn-link" data-toggle="dropdown">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
@@ -284,12 +340,15 @@
 										<td>
 											<div class="d-flex align-items-center">
 												<div class="checkbox text-right align-self-center">
-													<div class="custom-control custom-checkbox ">
-														<input type="checkbox" class="custom-control-input" id="customCheckBox26" required="">
-														<label class="custom-control-label" for="customCheckBox26"></label>
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input"
+															id="customCheckBox26" required="" />
+														<label class="custom-control-label"
+															for="customCheckBox26"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/14.jpg" height="43" width="43" class="rounded-circle ml-4">
+												<img alt="" src="images/doctors/14.jpg" height="43" width="43"
+													class="rounded-circle ml-4" />
 											</div>
 										</td>
 										<td>#P-00017</td>
@@ -297,18 +356,28 @@
 										<td>Dr. Kevin Zidan</td>
 										<td>Nursing</td>
 										<td>
-											<a href="#" class="btn btn-outline-light btn-rounded btn-sm" >No Schedule</a>
+											<a href="#" class="btn btn-outline-light btn-rounded btn-sm">No Schedule</a>
 										</td>
 										<td><span class="font-w500">+12 4122 4556</span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-light font-w600">Unavailable</span>
 												<div class="dropdown ml-auto text-right">
-													<div class="btn-link" data-toggle="dropdown" >
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<div class="btn-link" data-toggle="dropdown">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
@@ -324,12 +393,15 @@
 										<td>
 											<div class="d-flex align-items-center">
 												<div class="checkbox text-right align-self-center">
-													<div class="custom-control custom-checkbox ">
-														<input type="checkbox" class="custom-control-input" id="customCheckBox27" required="">
-														<label class="custom-control-label" for="customCheckBox27"></label>
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input"
+															id="customCheckBox27" required="" />
+														<label class="custom-control-label"
+															for="customCheckBox27"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/15.jpg" height="43" width="43" class="rounded-circle ml-4">
+												<img alt="" src="images/doctors/15.jpg" height="43" width="43"
+													class="rounded-circle ml-4" />
 											</div>
 										</td>
 										<td>#P-00018</td>
@@ -337,18 +409,29 @@
 										<td>Dr. Gustauv Loi</td>
 										<td>Dentist</td>
 										<td>
-											<a href="#" class="btn btn-primary light btn-rounded btn-sm" >2 Appointment</a>
+											<a href="#" class="btn btn-primary light btn-rounded btn-sm">2
+												Appointment</a>
 										</td>
 										<td><span class="font-w500">+12 2567 8654</span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-primary font-w600">Available</span>
 												<div class="dropdown ml-auto text-right">
-													<div class="btn-link" data-toggle="dropdown" >
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<div class="btn-link" data-toggle="dropdown">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
@@ -364,12 +447,15 @@
 										<td>
 											<div class="d-flex align-items-center">
 												<div class="checkbox text-right align-self-center">
-													<div class="custom-control custom-checkbox ">
-														<input type="checkbox" class="custom-control-input" id="customCheckBox28" required="">
-														<label class="custom-control-label" for="customCheckBox28"></label>
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input"
+															id="customCheckBox28" required="" />
+														<label class="custom-control-label"
+															for="customCheckBox28"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/16.jpg" height="43" width="43" class="rounded-circle ml-4">
+												<img alt="" src="images/doctors/16.jpg" height="43" width="43"
+													class="rounded-circle ml-4" />
 											</div>
 										</td>
 										<td>#P-00019</td>
@@ -377,18 +463,28 @@
 										<td>Dr. Samantha</td>
 										<td>Nursing</td>
 										<td>
-											<a href="#" class="btn btn-outline-light btn-rounded btn-sm" >No Schedule</a>
+											<a href="#" class="btn btn-outline-light btn-rounded btn-sm">No Schedule</a>
 										</td>
 										<td><span class="font-w500">+12 4125 6211</span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-light font-w600">Unavailable</span>
 												<div class="dropdown ml-auto text-right">
-													<div class="btn-link" data-toggle="dropdown" >
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<div class="btn-link" data-toggle="dropdown">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
@@ -404,12 +500,15 @@
 										<td>
 											<div class="d-flex align-items-center">
 												<div class="checkbox text-right align-self-center">
-													<div class="custom-control custom-checkbox ">
-														<input type="checkbox" class="custom-control-input" id="customCheckBox29" required="">
-														<label class="custom-control-label" for="customCheckBox29"></label>
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input"
+															id="customCheckBox29" required="" />
+														<label class="custom-control-label"
+															for="customCheckBox29"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/10.jpg" height="43" width="43" class="rounded-circle ml-4">
+												<img alt="" src="images/doctors/10.jpg" height="43" width="43"
+													class="rounded-circle ml-4" />
 											</div>
 										</td>
 										<td>#P-000110</td>
@@ -417,18 +516,29 @@
 										<td>Dr. David Lee</td>
 										<td>Physical Therapy</td>
 										<td>
-											<a href="#" class="btn btn-primary light btn-rounded btn-sm" >2 Appointment</a>
+											<a href="#" class="btn btn-primary light btn-rounded btn-sm">2
+												Appointment</a>
 										</td>
 										<td><span class="font-w500">+12 6567 1245</span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-primary font-w600">Available</span>
 												<div class="dropdown ml-auto text-right">
-													<div class="btn-link" data-toggle="dropdown" >
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<div class="btn-link" data-toggle="dropdown">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
@@ -444,12 +554,15 @@
 										<td>
 											<div class="d-flex align-items-center">
 												<div class="checkbox text-right align-self-center">
-													<div class="custom-control custom-checkbox ">
-														<input type="checkbox" class="custom-control-input" id="customCheckBox200" required="">
-														<label class="custom-control-label" for="customCheckBox200"></label>
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input"
+															id="customCheckBox200" required="" />
+														<label class="custom-control-label"
+															for="customCheckBox200"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/1.jpg" height="43" width="43" class="rounded-circle ml-4">
+												<img alt="" src="images/doctors/1.jpg" height="43" width="43"
+													class="rounded-circle ml-4" />
 											</div>
 										</td>
 										<td>#P-00012</td>
@@ -457,18 +570,29 @@
 										<td>Dr. Samantha</td>
 										<td>Dentist</td>
 										<td>
-											<a href="#" class="btn btn-primary light btn-rounded btn-sm" >5 Appointment</a>
+											<a href="#" class="btn btn-primary light btn-rounded btn-sm">5
+												Appointment</a>
 										</td>
 										<td><span class="font-w500">+12 4124 5125</span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-light font-w600">Unavailable</span>
 												<div class="dropdown ml-auto text-right">
-													<div class="btn-link" data-toggle="dropdown" >
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-															<path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#3E4954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<div class="btn-link" data-toggle="dropdown">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
+															<path
+																d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z"
+																stroke="#3E4954" stroke-width="2" stroke-linecap="round"
+																stroke-linejoin="round" />
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
@@ -485,52 +609,37 @@
 						</div>
 					</div>
 				</div>
-            </div>
-        </div>
-        
+			</div>
+		</div>
 
-       
-        <div data-layout="footer"></div>
-       
+		<div data-layout="footer"></div>
+	</div>
 
-		
-        
-
-
-    </div>
-    
-
-    
-    
-    <script src="./js/layout-loader.js"></script>
-    <script src="./vendor/global/global.min.js"></script>
+	<script src="./js/layout-loader.js"></script>
+	<script src="./vendor/global/global.min.js"></script>
 	<script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 	<script src="./vendor/chart.js/Chart.bundle.min.js"></script>
-    <script src="./js/custom.min.js"></script>
+	<script src="./js/custom.min.js"></script>
 	<script src="./js/deznav-init.js"></script>
 	<script src="./vendor/owl-carousel/owl.carousel.js"></script>
-	
+
 	<!-- Datatable -->
 	<script src="./vendor/datatables/js/jquery.dataTables.min.js"></script>
-	
+
 	<script>
-		(function($) {
-		 
-			var table = $('#example5').DataTable({
+		(function ($) {
+			var table = $("#example5").DataTable({
 				searching: false,
-				paging:true,
+				paging: true,
 				select: false,
-				//info: false,         
-				lengthChange:false 
-				
+				//info: false,
+				lengthChange: false,
 			});
-			$('#example tbody').on('click', 'tr', function () {
-				var data = table.row( this ).data();
-				
+			$("#example tbody").on("click", "tr", function () {
+				var data = table.row(this).data();
 			});
-		   
 		})(jQuery);
 	</script>
-	
 </body>
+
 </html>
