@@ -1,126 +1,98 @@
 # Roles y contexto del proyecto
 
-Guía de trabajo para mantener coherente la landing interactiva de Halloween Criollo.
+Guía de trabajo para mantener coherente Template Iris, una plantilla de administración hospitalaria estática.
 
 ## Contexto del proyecto
 
-- Es una landing estática temática de Halloween, sin framework ni proceso de build.
-- La experiencia principal es un juego de Tres en Raya entre Halloween y Criollo.
-- La página combina un video de fondo aleatorio, una capa de ambiente para mejorar el contraste, una apertura con máscara de calabaza, un logotipo animado y el tablero interactivo.
-- La interfaz usa una estética de arcade retro: panel central con neón, marcador, indicador de turno y casillas navegables por teclado.
-- Todo el contenido se sirve como archivos estáticos desde Apache o cualquier servidor HTTP local.
-- La interfaz y los mensajes están en español.
+- Es un dashboard frontend estático basado en HTML, CSS y JavaScript vanilla.
+- No utiliza framework frontend, bundler, backend ni proceso de compilación.
+- Las páginas se sirven desde Apache o cualquier servidor HTTP estático.
+- Las dependencias frontend están incluidas localmente en `vendor/`.
+- El contenido de la interfaz está principalmente en inglés.
+- La carga de componentes compartidos se realiza con `js/layout-loader.js`.
 
 ## Estructura real
 
-- `index.html`: documento base, video, capa visual, logotipo, encabezado de juego, marcador, tablero y contenedor de notificaciones.
-- `css/styles.css`: layout, identidad visual, tablero, animaciones, overlay de apertura y responsive styling.
-- `css/logo.css`: estilos autocontenidos del componente de logo reutilizable.
-- `css/batman.css`: sprite decorativo del murciélago y sus reglas de posicionamiento.
-- `js/script.js`: creación del tablero, turnos, validación de victorias/empates, marcador, efectos de celebración y selección de video.
-- `js/logo.js`: inicialización independiente del logo, partículas y lightbox.
-- `resources/`: videos, logotipos y SVG utilizados por la landing.
-- `README.md`: instrucciones básicas del repositorio y enlaces a demos.
-- `server.js`: servidor Express y Socket.IO; mantiene salas, turnos y validación autoritativa.
-- `package.json`: dependencias y comando de arranque del servidor.
-- `card.html`, `css/card.css`, `js/card.js`: demo y escena 3D de la carta de calavera, reutilizada como recompensa de victoria.
+- `index.html`: dashboard principal.
+- `*.html`: páginas del dashboard, formularios, tablas, gráficos, aplicaciones, widgets y pantallas auxiliares.
+- `layout/`: fragmentos HTML compartidos por las páginas del dashboard:
+  - `preloader.html`
+  - `nav.html`
+  - `chat.html`
+  - `header.html`
+  - `sidebar.html`
+  - `footer.html`
+- `js/layout-loader.js`: reemplaza los placeholders `data-layout` por los fragmentos de `layout/`.
+- `js/custom.min.js`: comportamiento común de la plantilla.
+- `js/deznav-init.js`: inicialización de la configuración de navegación.
+- `js/dashboard/`, `js/plugins-init/` y otros scripts: comportamiento específico de cada página.
+- `css/`: hojas de estilo de la plantilla.
+- `vendor/`: librerías JavaScript, CSS y plugins distribuidos localmente.
+- `images/`: logos, avatares, iconos e imágenes de contenido.
+- `README.md`: documentación de instalación, arquitectura y desarrollo.
 - `.ia-context/`: contexto y reglas para asistentes de desarrollo.
 
 ## Roles recomendados
 
-### Agent HTML / UX
+### Agent HTML / Layout
 
-Responsable de la estructura de la landing y de la accesibilidad.
-
-Trabaja en:
-
-- `index.html`
+Responsable de la estructura de las páginas y de la integración de layouts.
 
 Debe:
 
-- Mantener la carga de `css/styles.css` y `js/script.js`.
-- Conservar `lang="es"`, el viewport y textos alternativos descriptivos.
-- Mantener los identificadores que usa `script.js`: `background-video`, `playerHalloween`, `playerCriollo`, `draw`, `board` y `notification`.
-- Mantener `game-status` como región de estado accesible y las casillas como botones con `aria-label`.
-- Evitar introducir markup innecesario o dependencias de frameworks.
+- Mantener `<!DOCTYPE html>`, el viewport y la estructura HTML válida.
+- Usar placeholders con el formato `<div data-layout="nombre"></div>` en las páginas que utilizan el shell del dashboard.
+- Mantener el orden del shell: `preloader`, `main-wrapper`, `nav`, `chat`, `header`, `sidebar`, contenido y `footer`.
+- No copiar el contenido de `layout/` dentro de cada página.
+- Mantener los scripts propios de cada página en su archivo HTML.
+- Cargar `js/layout-loader.js` antes de los scripts que dependen del layout.
+- No modificar las pantallas de login, error, recuperación o bloqueo para convertirlas en dashboard si no corresponde a su diseño.
 
-### Agent CSS / Visual
+### Agent CSS / UI
 
-Responsable de la identidad visual y las animaciones.
-
-Trabaja en:
-
-- `css/styles.css`
-- `css/logo.css`
+Responsable de la apariencia visual y del responsive design.
 
 Debe:
 
-- Mantener la estética de Halloween y la legibilidad del tablero sobre el video.
-- Mantener la capa `.video-atmosphere` entre el video y el contenido para que el juego central tenga contraste.
-- Mantener el overlay inicial como una intro visual independiente del juego; `halloween.svg` se anima desde el centro y se retira al finalizar.
-- El murciélago es decoración de viewport, no parte del layout del juego; debe permanecer fuera de `#container` y usar `aria-hidden`.
-- Conservar la jerarquía arcade de `.game-header`, `.game-status`, `.score` y `.cell`.
-- Respetar `prefers-reduced-motion` cuando se modifiquen animaciones.
-- Mantener el layout usable en pantallas pequeñas.
-- Referenciar recursos con rutas relativas a `resources/`.
-- Mantener el estilo del logo dentro de `css/logo.css`; no volver a mezclarlo en los estilos del juego.
+- Priorizar las clases y variables ya existentes en `css/style.css`.
+- Mantener la compatibilidad con Bootstrap y los plugins incluidos en `vendor/`.
+- Preservar el layout responsive, el menú lateral, el header fijo y el preloader.
+- Evitar estilos inline salvo que sean necesarios para datos dinámicos o ya formen parte del patrón existente.
+- Mantener estados `hover`, `focus`, activos y deshabilitados visibles.
+- Verificar los cambios en resoluciones de escritorio y móvil.
+- No introducir frameworks ni dependencias nuevas para cambios visuales puntuales.
 
-### Agent JS / Juego
+### Agent JavaScript
 
-Responsable del comportamiento interactivo.
-
-Trabaja en:
-
-- `js/script.js`
+Responsable del comportamiento compartido y específico de las páginas.
 
 Debe:
 
-- Mantener el flujo de turnos, victorias, empates y reinicio automático.
-- En modo Socket.IO, no confiar en el estado del cliente: las jugadas deben validarse y emitirse desde `server.js`.
-- Mantener fallback local cuando Socket.IO no está disponible o la página se abre con `file://`.
-- Comprobar que los elementos del DOM existan antes de usarlos si se modifica la estructura.
-- Mantener la selección aleatoria entre `video01.mp4` y `video04.mp4`.
-- Limpiar efectos temporales (`.burst`, notificaciones y clases de victoria) para no acumular nodos ni estados.
-- Evitar dependencias adicionales y mantener JavaScript vanilla.
-
-### Agent Logo / Componente
-
-Responsable del logo interactivo reutilizable.
-
-Trabaja en:
-
-- `css/logo.css`
-- `js/logo.js`
-
-Debe:
-
-- Mantener la integración basada en `.logo > .box > img`.
-- No depender del tablero, del video ni del overlay de apertura.
-- Evitar listeners duplicados y exponer únicamente la inicialización necesaria.
-- Conservar soporte para clic, teclado, `Escape` y `prefers-reduced-motion`.
+- Mantener JavaScript compatible con los navegadores soportados por la plantilla.
+- Cargar los layouts antes de ejecutar scripts que consultan elementos como `#main-wrapper`, `#menu`, `.header` o `.deznav`.
+- Conservar los scripts específicos de cada página y su orden original.
+- Validar que los elementos requeridos existan antes de usarlos cuando se modifique el HTML.
+- Informar errores de carga de layouts o scripts en consola y mediante una señal visible para el usuario.
+- Evitar catches amplios, fallos silenciosos y valores por defecto que oculten errores.
+- Reutilizar las librerías locales antes de añadir código o dependencias nuevas.
 
 ### Agent Docs / IA Context
 
-Responsable de que esta documentación refleje el código real.
-
-Trabaja en:
-
-- `.ia-context/`
-- `README.md`
+Responsable de mantener esta documentación alineada con el repositorio.
 
 Debe:
 
-- Actualizar las rutas y nombres de archivos cuando cambie la estructura.
-- No documentar módulos, templates o librerías que no existan en el repositorio.
-- Mantener las reglas concisas y accionables.
+- Documentar únicamente archivos, rutas y tecnologías existentes.
+- Actualizar las reglas si cambia la arquitectura de layouts o la forma de servir las páginas.
+- Mantener los ejemplos y comandos compatibles con Apache y Windows cuando aplique.
+- No describir un backend, un sistema de build o funcionalidades que no estén implementados.
 
 ## Checklist final
 
-- La landing abre correctamente desde Apache o un servidor HTTP local.
-- El video de fondo, la máscara de apertura y los recursos cargan sin errores 404.
-- El tablero permite nueve jugadas, detecta las ocho líneas ganadoras y registra empates.
-- El marcador y las notificaciones se actualizan de acuerdo con el resultado.
-- El reinicio no deja clases, partículas ni listeners duplicados.
-- Dos clientes en la misma sala reciben roles diferentes y observan el mismo tablero.
-- La carta 3D aparece como recompensa modal después de una victoria y no interrumpe las jugadas normales.
-- La experiencia sigue siendo usable con movimiento reducido y en pantallas pequeñas.
+- La página se abre mediante HTTP desde Apache o un servidor estático.
+- Los seis layouts compartidos aparecen una sola vez donde corresponda.
+- No quedan bloques duplicados de `preloader`, navegación, chat, header, sidebar o footer.
+- Los scripts específicos de la página siguen presentes y en su orden original.
+- No hay errores de red ni errores JavaScript en la consola.
+- Los enlaces, imágenes, estilos y plugins cargan con rutas relativas válidas.
+- La página conserva su comportamiento y su diseño responsive.
